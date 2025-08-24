@@ -22,4 +22,17 @@ pipeline {
         }
     }
 
+    post {
+        always {
+            echo 'This runs always after the build.'
+        }
+        success {
+            echo 'Build successful!'
+            // Add actions like deploying artifacts or sending success notifications
+        }
+        failure {
+            echo 'Build failed!'
+            // Add actions like sending failure alerts or triggering rollback
+        }
+
 }
