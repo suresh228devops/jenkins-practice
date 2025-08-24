@@ -18,10 +18,11 @@ pipeline {
                 script {
                     sh """
                         echo 'Building...'
-                        sleep 10
+                        sleep 5
+                        echo "Course Name is: $COURSE"
                         env
                     """
-                }   
+                }
             }
         }
 
@@ -44,3 +45,10 @@ pipeline {
             deleteDir()
         }
         success {
+            echo 'Build successful!'
+        }
+        failure {
+            echo 'Build failed!'
+        }
+    }
+}
