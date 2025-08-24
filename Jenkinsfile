@@ -18,7 +18,7 @@ pipeline {
                 script {
                     sh """
                         echo 'Building...'
-                        sleep 5
+                        sleep 10
                         echo "Course Name is: $COURSE"
                         env
                     """
