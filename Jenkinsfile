@@ -10,20 +10,17 @@ pipeline {
     options {
         timeout(time: 10, unit: 'SECONDS') 
         disableConcurrentBuilds()
-    
-    //Build
+    }
+
     stages {
         stage('Build') {
             steps {
-                script{
+                script {
                     sh """
-                      echo 'Building...'
-                      sleep 10
-                      env
-
+                        echo 'Building...'
+                        sleep 10
+                        env
                     """
-                
-                
                 }   
             }
         }
@@ -47,12 +44,3 @@ pipeline {
             deleteDir()
         }
         success {
-            echo 'Build successful!'
-            // Add actions like deploying artifacts or sending success notifications
-        }
-        failure {
-            echo 'Build failed!'
-            // Add actions like sending failure alerts or triggering rollback
-        }
-    }
-}
