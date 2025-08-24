@@ -1,24 +1,25 @@
 pipeline {
-	agent {
+    agent {
         label 'AGENT-1'
     }
-	
-	stages {
-		stage('Build') {
-			steps{
-				echo 'Building...'
-		    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
         }
-		
-		stage('Test'){
-			steps{
-				echo 'Testing...'
-		    }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
         }
-		stage('Deploy'){
-			steps{
-				echo 'Deploying...'
-		    }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
         }
     }
 
@@ -35,5 +36,5 @@ pipeline {
             echo 'Build failed!'
             // Add actions like sending failure alerts or triggering rollback
         }
-
+    }
 }
