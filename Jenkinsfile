@@ -8,7 +8,7 @@ pipeline {
     }
 
     options {
-        timeout(time: 1, unit: 'MINUTES') 
+        timeout(time: 10, unit: 'SECONDS') 
         disableConcurrentBuilds()
     
     //Build
@@ -18,6 +18,7 @@ pipeline {
                 script{
                     sh """
                       echo 'Building...'
+                      sleep 10
                       env
 
                     """
