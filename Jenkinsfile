@@ -25,6 +25,7 @@ pipeline {
     post {
         always {
             echo 'This runs always after the build.'
+            deleteDir()
         }
         success {
             echo 'Build successful!'
