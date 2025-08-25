@@ -38,6 +38,7 @@ pipeline {
             }
         }
         stage('Deploy') {
+            // it is like tacking the approval from team lead if any
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
